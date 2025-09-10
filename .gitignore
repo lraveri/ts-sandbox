@@ -3,3 +3,5 @@ logs.txt
 .gitignore
 .claude
 .env
+dist
+coverage
