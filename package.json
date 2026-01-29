@@ -1,11 +1,13 @@
 {
-    "name": "ts-sandbox",
+    "name": "js-sandbox",
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "start": "tsx --env-file .env src/index.ts",
-        "test": "vitest",
-        "test:coverage": "vitest --coverage",
+        "start": "node src/index.ts",
+        "test": "node --test",
+        "test:watch": "node --test --watch",
+        "test:coverage": "node --test --experimental-test-coverage",
+        "typecheck": "tsc",
         "lint": "eslint . --ext .ts",
         "format": "prettier --write ."
     },
@@ -18,13 +20,10 @@
         "@types/node": "^24.9.2",
         "@typescript-eslint/eslint-plugin": "^8.36.0",
         "@typescript-eslint/parser": "^8.36.0",
-        "@vitest/coverage-v8": "^3.2.4",
         "eslint": "^9.31.0",
         "eslint-config-prettier": "^10.1.5",
         "eslint-plugin-prettier": "^5.5.1",
         "prettier": "^3.6.2",
-        "tsx": "^4.20.5",
-        "typescript": "^5.8.3",
-        "vitest": "^3.2.4"
+        "typescript": "^5.8.3"
     }
 }
